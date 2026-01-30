@@ -5,28 +5,36 @@ Generate a simple swap UI using local or cloud Ollama models that uses your Troc
 Note - this is just a quick vibe coded script, it's local and is just generating a basic page, shouldn't be any issues but if there is, let me know. It's just a starter, always check the code yourself.
 
 
-## Requirements
+### Requirements
+
 - Python 3.8+
 - Ollama installed and running
 - Note > you can use any AI service you like, just ask AI to adjust the script to suit. I just use this for simple stuff because I like that local & cloud is easy to switch between.
 
-## Install Ollama(linux)
+### Install Ollama(linux)
+
+```bash
 curl -fsSL https://ollama.com/install.sh | sh
+```
 
-## Wait for install script to finish then enter this command to download a model from here(https://ollama.com/search):
+### Wait for install script to finish then enter this command to download a model from here(https://ollama.com/search):
+
+```bash
 ollama run model_name
+```
 
-## Ollama links if you get stuck
-https://docs.ollama.com/
+### Ollama links if you get stuck
+https://docs.ollama.com/ 
 https://ollama.com/download
 
-## Deploy(you will need your own secure VPS or a pre-existing website with Nginx setup)
+### Deploy
+(you will need your own secure VPS or a pre-existing website with Nginx setup)
 
 Upload the three files to any static host:
-- **Nginx**: Basic static file serving
+**Nginx**: Basic static file serving
 
 
-## How to run the script
+### How to run the script
 
 ```bash
 - Run script in CLI with local model
@@ -53,7 +61,7 @@ uv run swap_gen.py --cloud
    - `faq.html` - Collapsible FAQ page
    - `style.css` - Professional cyberpunk styles
 
-## Test Locally
+### Test Locally
 
 ```bash
 cd output
@@ -62,9 +70,9 @@ python3 -m http.server 8000 --bind 127.0.0.1
 
 Visit: `http://localhost:8000`
 
-**Note**: `--bind 127.0.0.1` ensures the server only accepts connections from your machine (localhost only, more secure).
+Note: `--bind 127.0.0.1` ensures the server only accepts connections from your machine (localhost only, more secure).
 
-## Features
+### Features
 
 ### FAQ Page
 - Collapsible questions (click to expand/collapse)
@@ -79,7 +87,7 @@ Visit: `http://localhost:8000`
 - All elements adapt to chosen theme(iframe stays the same colors)
 
 
-## Basic Security Features(quick vibe code, don't expect the world)
+### Basic Security Features(quick vibe code, don't expect the world)
 
 - HTML escaping for XSS protection
 - Input validation on referral codes
@@ -89,13 +97,13 @@ Visit: `http://localhost:8000`
 - Minimal JavaScript (only for FAQ dropdowns)
 
 
-## Notes
+### Notes
 
 - Referral code input: just the code (e.g., `abc123`), not full URL. Get this from Trocador
 - Page title appears in both header and browser tab
 - FAQ dropdowns collapse by default for cleaner UI
 
-## File Structure
+### File Structure
 
 ```
 swap_gen.py          # Main generator script
