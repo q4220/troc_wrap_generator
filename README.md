@@ -8,6 +8,7 @@ Note - this is just a quick vibe coded script, it's local and is just generating
 
 ### Requirements
 
+- uv ( curl -LsSf https://astral.sh/uv/install.sh | sh )
 - Python 3.8+
 - Ollama installed and running
 - Note > you can use any AI service you like, just ask AI to adjust the script to suit. I just use this for simple stuff because I like that local & cloud is easy to switch between.
@@ -21,7 +22,7 @@ curl -fsSL https://ollama.com/install.sh | sh
 ```
 
 ### Wait for install script to finish then enter this command to download a model from here  
-(https://ollama.com/search):
+https://ollama.com/search:
 
 ```bash
 ollama run model_name
