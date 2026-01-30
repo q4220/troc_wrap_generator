@@ -707,7 +707,7 @@ def generate_html(referral_code, page_title, is_faq=False):
 
     <main>
         <section class="swap-section">
-            <h2>Exchange Crypto Instantly</h2>
+            <h2>Monero Swaps via Trocador</h2>
             <div class="swap-widget">
                 <iframe
                     src="https://trocador.app/widget/?ref={safe_referral}"
