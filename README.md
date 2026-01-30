@@ -1,8 +1,8 @@
-# Trocador Swap Page Generator
+## Trocador Swap Page Generator
 
 Generate a simple swap UI using local or cloud Ollama models that uses your Trocador referral code. Features collapsible FAQs, customizable titles, and a few theme options.
 
-# Note - this is just a quick vibe coded script, it's local and is just generating a basic page, shouldn't be any issues but if there is, let me know. It's just a starter, always check the code yourself.
+Note - this is just a quick vibe coded script, it's local and is just generating a basic page, shouldn't be any issues but if there is, let me know. It's just a starter, always check the code yourself.
 
 
 ## Requirements
@@ -10,13 +10,13 @@ Generate a simple swap UI using local or cloud Ollama models that uses your Troc
 - Ollama installed and running
 - Note > you can use any AI service you like, just ask AI to adjust the script to suit. I just use this for simple stuff because I like that local & cloud is easy to switch between.
 
-# Install Ollama(linux)
+## Install Ollama(linux)
 curl -fsSL https://ollama.com/install.sh | sh
 
-# Wait for install script to finish then enter this command to download a model from here(https://ollama.com/search):
+## Wait for install script to finish then enter this command to download a model from here(https://ollama.com/search):
 ollama run model_name
 
-# Ollama links if you get stuck
+## Ollama links if you get stuck
 https://docs.ollama.com/
 https://ollama.com/download
 
@@ -29,18 +29,18 @@ Upload the three files to any static host:
 ## How to run the script
 
 ```bash
-# Run script in CLI with local model
+- Run script in CLI with local model
 uv run swap_gen.py
 
-# Run script with cloud model(recommended for custom themes but be mindful of the privacy trade offs)
+- Run script with cloud model(recommended for custom themes but be mindful of the privacy trade offs)
 uv run swap_gen.py --cloud
 ```
 
 ## Usage
 
-1. **Enter your Trocador referral code** (just the code, not the full URL)
-2. **Set page title** (default: "Get Monero")
-3. **Choose a template** (1-5):
+1. Enter your Trocador referral code (just the code, not the full URL)
+2. Set page title (default: "Get Monero")
+3. Choose a template (1-5):
    - **Matrix Green** - Classic hacker aesthetic with green accents
    - **Monero Orange** - Monero-inspired orange theme (#ff6600)
    - **Purple Cyber** - Cyberpunk purple aesthetic
@@ -48,7 +48,7 @@ uv run swap_gen.py --cloud
 
    - **Custom** - Describe your aesthetic, AI generates color scheme(not currently working)
 
-4. **Files generated** in `./output/`:
+4. Files generated in `./output/`:
    - `index.html` - Main swap page with enhanced styling
    - `faq.html` - Collapsible FAQ page
    - `style.css` - Professional cyberpunk styles
